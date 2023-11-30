@@ -1,0 +1,189 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "testcase",
+    "children" : [ {
+      "name" : "test_business_strategy",
+      "children" : [ {
+        "name" : "查询waf策略",
+        "uid" : "7581be43ef5b4b5f",
+        "parentUid" : "d84a4310a797b97635b43b4d0b3a5eb5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313029168,
+          "stop" : 1701313029209,
+          "duration" : 41
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "修改策略排序值",
+        "uid" : "f57261f28c378c20",
+        "parentUid" : "d84a4310a797b97635b43b4d0b3a5eb5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313029214,
+          "stop" : 1701313029770,
+          "duration" : 556
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "还原策略排序值",
+        "uid" : "b04cd1bb267ad4df",
+        "parentUid" : "d84a4310a797b97635b43b4d0b3a5eb5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313029775,
+          "stop" : 1701313029827,
+          "duration" : 52
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "编辑后还原策略数据",
+        "uid" : "8e14643bb8afb94c",
+        "parentUid" : "d84a4310a797b97635b43b4d0b3a5eb5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313029832,
+          "stop" : 1701313030876,
+          "duration" : 1044
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d84a4310a797b97635b43b4d0b3a5eb5"
+    }, {
+      "name" : "test_kong",
+      "children" : [ {
+        "name" : "查询网关信息",
+        "uid" : "382f12b314ae46d3",
+        "parentUid" : "e1bf4e7e37ebd8243a32ff110416ba62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313030880,
+          "stop" : 1701313030902,
+          "duration" : 22
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "修改业务网关排序值",
+        "uid" : "99b604952bbaf5bc",
+        "parentUid" : "e1bf4e7e37ebd8243a32ff110416ba62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313030908,
+          "stop" : 1701313030946,
+          "duration" : 38
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "恢复业务网关排序值",
+        "uid" : "525ee354f98088a1",
+        "parentUid" : "e1bf4e7e37ebd8243a32ff110416ba62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313030952,
+          "stop" : 1701313030989,
+          "duration" : 37
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "编辑后还原网关信息",
+        "uid" : "76b9b6a2ee99fa59",
+        "parentUid" : "e1bf4e7e37ebd8243a32ff110416ba62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313030993,
+          "stop" : 1701313031611,
+          "duration" : 618
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e1bf4e7e37ebd8243a32ff110416ba62"
+    }, {
+      "name" : "test_waf",
+      "children" : [ {
+        "name" : "查询waf策略",
+        "uid" : "9a84425d8fac1f84",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313031616,
+          "stop" : 1701313031633,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "修改waf策略状态",
+        "uid" : "98219fb378bd17fa",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313031640,
+          "stop" : 1701313032192,
+          "duration" : 552
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "同步waf策略",
+        "uid" : "7d445af1b93756cf",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "failed",
+        "time" : {
+          "start" : 1701313032200,
+          "stop" : 1701313032265,
+          "duration" : 65
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "查询第一条waf数据详情",
+        "uid" : "6033e13087cb11e9",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313032355,
+          "stop" : 1701313032396,
+          "duration" : 41
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "修改第一条waf数据详情里面的第一条策略规则数据状态并复原",
+        "uid" : "3771ab08956753ec",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "passed",
+        "time" : {
+          "start" : 1701313032400,
+          "stop" : 1701313033054,
+          "duration" : 654
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "修改第一条waf策略数据详情里面第一条策略规则数据并复原",
+        "uid" : "67bf769574745c08",
+        "parentUid" : "5d9fa49efa137151473b10cd41cbc153",
+        "status" : "failed",
+        "time" : {
+          "start" : 1701313033065,
+          "stop" : 1701313033140,
+          "duration" : 75
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5d9fa49efa137151473b10cd41cbc153"
+    } ],
+    "uid" : "559e15d0a5469c40d1629e36b5ae40ea"
+  } ]
+}

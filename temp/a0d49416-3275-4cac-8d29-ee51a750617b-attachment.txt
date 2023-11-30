@@ -1,0 +1,4 @@
+INFO     root:log.py:48 test01_waf_strategy:------用例场景：查询waf策略------
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks?page=1&size=10 HTTP/1.1" 200 None
+INFO     root:log.py:48 test01_waf_strategy:数据查询成功
+INFO     root:log.py:48 test01_waf_strategy:获取请求结果：{'data': [{'id': '1', 'checkName': 'url类', 'remark': 'url检查', 'enabled': 0}, {'id': '2', 'checkName': 'args类', 'remark': 'get请求参数检查', 'enabled': 1}, {'id': '3', 'checkName': 'UserAgent类', 'remark': 'User-Agent检查', 'enabled': 0}, {'id': '4', 'checkName': 'cookie类', 'remark': 'cookie检查', 'enabled': 0}, {'id': '5', 'checkName': 'post类', 'remark': 'post请求参数检查', 'enabled': 0}], 'recordsTotal': 5, 'recordsFiltered': 5}

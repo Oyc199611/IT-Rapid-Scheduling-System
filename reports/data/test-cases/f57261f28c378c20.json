@@ -1,0 +1,161 @@
+{
+  "uid" : "f57261f28c378c20",
+  "name" : "修改策略排序值",
+  "fullName" : "testcase.test_business_strategy.Test_BusinessStrategy_service#test02_change_business_stragety_order",
+  "historyId" : "8c76ae87a80cba856b909ecc047fb020",
+  "time" : {
+    "start" : 1701313029214,
+    "stop" : 1701313029770,
+    "duration" : 556
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1701313029104,
+      "stop" : 1701313029166,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "read_cookie",
+    "time" : {
+      "start" : 1701313029213,
+      "stop" : 1701313029214,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1701313029166,
+      "stop" : 1701313029166,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1701313029166,
+      "stop" : 1701313029166,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "修改策略排序值",
+      "time" : {
+        "start" : 1701313029214,
+        "stop" : 1701313029770,
+        "duration" : 556
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "read_cookie",
+        "value" : "{'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXRoIjoiY3NjcC5yb2xlLmFkZCxjc2NwLnJvbGUuZWRpdCxjc2NwLmxvZ2dpbmcubG9naW4sY3NjcC5sb2dnaW5nLm9wZXJhdGlvbixjc2NwLnVzZXIuZGVsLGNzY3Aucm9sZS5kZWwsY3NjcC51c2VyLnF1ZXJ5LGNzY3AudXNlci5hZGQsY3NjcC51c2VyLmVkaXQsY3NjcC5yb2xlLGNzY3AubG9nZ2luZyxjc2NwLmxvZ2dpbmcub3BlcmF0aW9uIiwiZXhwIjoxNzAxMzkzOTA1fQ.laTuMWPdgwpq44GQ-jfeHJDMJrKiZEt92s8Ob4SlGifAV7GPxpNyL6sPLDLBmfpMn_GEzeti88uXszD-T6Pc1A'}"
+      }, {
+        "name" : "base_url",
+        "value" : "'http://134.224.183.100'"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "b72565b1564fe4be",
+      "name" : "log",
+      "source" : "b72565b1564fe4be.txt",
+      "type" : "text/plain",
+      "size" : 671
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 1,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "业务策略管理模块"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=2)"
+  }, {
+    "name" : "tag",
+    "value" : "test_businessstrategy"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_business_strategy"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_BusinessStrategy_service"
+  }, {
+    "name" : "host",
+    "value" : "oyc"
+  }, {
+    "name" : "thread",
+    "value" : "18500-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_business_strategy"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=2)", "test_businessstrategy" ]
+  },
+  "source" : "f57261f28c378c20.json",
+  "parameterValues" : [ ]
+}

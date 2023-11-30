@@ -1,0 +1,12 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks?page=1&size=10 HTTP/1.1" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafRules?page=1&size=10&checkId=1&enabled=-1&person=&updateAtStart=&updateAtEnd= HTTP/1.1" 200 None
+INFO     root:log.py:48 test06_edit_waf_detail:------用例场景：查询第一条waf数据详情里面的第一条策略规则的详细数据------
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafRules/1628278021129584642?id=1628278021129584642 HTTP/1.1" 200 None
+INFO     root:log.py:48 test06_edit_waf_detail:查询第一条waf数据详情里面的第一条策略规则的详细数据成功
+INFO     root:log.py:48 test06_edit_waf_detail:获得的查询结果：{'id': '1628278021129584642', 'checkId': 1, 'rule': '\\.(svn|htaccess|bash_history)', 'enabled': 1, 'remark': '', 'status': 1, 'createBy': 1, 'createAt': '2023-02-22T14:18:26.524+08:00', 'updateBy': 1, 'updateAt': '2023-04-07T16:35:35.304+08:00'}
+INFO     root:log.py:48 test06_edit_waf_detail:开始编辑-备注字段，并提交
+INFO     root:log.py:48 test06_edit_waf_detail:提交参数为：{'id': '1628278021129584642', 'checkId': '1', 'rule': '\\.(svn|htaccess|bash_history)', 'remark': 'test', 'enabled': '1'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "PUT /api/cscpWafRules HTTP/1.1" 401 None
+INFO     root:log.py:48 test06_edit_waf_detail:修改第一条waf数据详情里面的第一条策略规则的详细数据-备注失败
+DEBUG    charset_normalizer:api.py:451 Encoding detection: utf_8 is most likely the one.
+INFO     root:log.py:48 test06_edit_waf_detail:失败原因：{'type': 'problem/message', 'title': 'Unauthorized', 'status': 401, 'detail': 'Full authentication is required to access this resource', 'path': '/api/cscpWafRules', 'message': '未授权'}

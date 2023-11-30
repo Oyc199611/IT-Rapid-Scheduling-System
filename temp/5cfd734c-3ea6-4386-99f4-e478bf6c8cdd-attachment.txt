@@ -1,0 +1,5 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpKongInfos?name=&regionIds=&page=1&size=10 HTTP/1.1" 200 None
+INFO     root:log.py:48 test03_reset_kong_order:------用例场景：还原业务网关排序值------
+INFO     root:log.py:48 test03_reset_kong_order:获取请求入参：{'id': '1572479661942816770', 'newOrderby': '1'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "PUT /api/cscpKongInfos/changeOrderby HTTP/1.1" 200 0
+INFO     root:log.py:48 test03_reset_kong_order:恢复业务网关排序值成功，用例通过

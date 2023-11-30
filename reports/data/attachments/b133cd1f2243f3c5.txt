@@ -1,0 +1,5 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpKongSimpleServices?nameLike=&page=1&size=10&regionIds=&kongId= HTTP/1.1" 200 None
+INFO     root:log.py:48 test03_reset_business_stragety_order:------用例场景：还原策略排序值------
+INFO     root:log.py:48 test03_reset_business_stragety_order:接口请求入参：{'newOrderby': 0, 'serviceId': '1587718666376495106'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "PUT /api/cscpKongSimpleServices/changeOrderby HTTP/1.1" 200 0
+INFO     root:log.py:48 test03_reset_business_stragety_order:成功还原策略排序值，用例通过

@@ -1,0 +1,9 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpKongInfos?name=&regionIds=&page=1&size=10 HTTP/1.1" 200 None
+INFO     root:log.py:48 test04_edit_kong_information:------用例场景：编辑业务网关信息------
+INFO     root:log.py:48 test04_edit_kong_information:获取请求入参：{'id': '1572479661942816770', 'key': 'icds@20220824', 'name': '生产调度网关--模拟发版', 'orderby': 6, 'status': 1, 'url': 'http://192.168.103.77/kong-admin-api', 'regionIds': '1,4,1572476132326948866'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "PUT /api/cscpKongInfos HTTP/1.1" 200 None
+INFO     root:log.py:48 test04_edit_kong_information:编辑网关信息成功
+INFO     root:log.py:48 test04_edit_kong_information:------用例场景：还原业务网关信息------
+INFO     root:log.py:48 test04_edit_kong_information:获取请求入参：{'id': '1572479661942816770', 'key': 'icds@20220824', 'name': '生产调度网关--模拟发版', 'orderby': 1, 'status': 1, 'url': 'http://192.168.103.77/kong-admin-api', 'regionIds': '1,4,1572476132326948866'}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "PUT /api/cscpKongInfos HTTP/1.1" 200 None
+INFO     root:log.py:48 test04_edit_kong_information:还原网关信息成功，用例通过

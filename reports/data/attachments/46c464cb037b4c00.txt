@@ -1,0 +1,6 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks?page=1&size=10 HTTP/1.1" 200 None
+INFO     root:log.py:48 test02_change_waf_status:------用例场景：修改waf策略状态------
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks/switch?id=1 HTTP/1.1" 200 0
+INFO     root:log.py:48 test02_change_waf_status:修改waf策略状态成功
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks/switch?id=1 HTTP/1.1" 200 0
+INFO     root:log.py:48 test02_change_waf_status:还原waf策略状态成功

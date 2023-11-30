@@ -1,0 +1,6 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks?page=1&size=10 HTTP/1.1" 200 None
+INFO     root:log.py:48 test03_synchronization_waf:------用例场景：同步waf策略------
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://134.224.183.100:80 "GET /api/cscpWafChecks/syncWaf HTTP/1.1" 400 None
+INFO     root:log.py:48 test03_synchronization_waf:同步waf策略失败
+DEBUG    charset_normalizer:api.py:451 Encoding detection: utf_8 is most likely the one.
+INFO     root:log.py:48 test03_synchronization_waf:失败原因：{'type': 'problem/message', 'title': '插件参数错误', 'status': 400, 'path': '/api/cscpWafChecks/syncWaf', 'message': 'error.plugin.incorrect'}
