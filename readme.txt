@@ -1,15 +1,15 @@
-1ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£¬ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-cd ï¿½ï¿½Ç°Ä¿Â¼ï¿½ï¿½ï¿½ï¿½
+1¡¢ÖÕ¶ËÀïÃæÖ´ÐÐÈçÏÂÃüÁî£¬°²×°ÒÀÀµ£º
+cd µ±Ç°Ä¿Â¼Ãû³Æ
 pip install -r requirements.txt
 
-2ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Â¼ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½Ü£ï¿½ï¿½Þ½Ó¿ï¿½ï¿½Äµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½È¡ï¿½ï¿½È¨ï¿½ï¿½Authorizationï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
- 1ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ÏµÍ³
- 2ï¿½ï¿½f12ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¿´Ò»ï¿½ï¿½ï¿½Ó¿Úµï¿½Headers->Response Headers,ï¿½ï¿½Authorizationï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ä¿/data/cookie/cookie.ymlï¿½Ð¼ï¿½ï¿½ï¿½
- 3ï¿½ï¿½ymlï¿½ÐµÄ¼ï¿½È¨ï¿½ï¿½ï¿½Ç¼ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½  key: value
+2¡¢ÓÉÓÚµÇÂ¼´æÔÚ¼ÓÃÜ£¬ÎÞ½Ó¿ÚÎÄµµ£¬¹ý³Ì²»Çå³þ£¬¸Ã²¿·ÖÎ´×ö×Ô¶¯»¯£¬²ÉÓÃÊÖ¶¯ÌáÈ¡¼øÈ¨ÂëAuthorizationÐÎÊ½£¬ÌáÈ¡·½·¨ÈçÏÂ£º
+ 1£©µÇÂ¼¸ÃÏµÍ³
+ 2£©f12£¬ÈÎÒâ²é¿´Ò»¸ö½Ó¿ÚµÄHeaders->Response Headers,½«AuthorizationºÍËüµÄÖµ¸´ÖÆµ½ÏîÄ¿/data/cookie/cookie.ymlÖÐ¼´¿É
+ 3£©ymlÖÐµÄ¼øÈ¨ÂëÊÇ¼üÖµ¶ÔÐÎÊ½£¬¼üÖµ¼äÓÐÒ»¸ö¿Õ¸ñ£¬Èç  key: value
 
-3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ÔµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
- 1ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½Ä¿/pytest.iniï¿½Ä¼ï¿½ï¿½Ðµï¿½base_urlï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½
+3¡¢ÈçºÎÇÐ»»ËùÒª²âÊÔµÄ»·¾³µØÖ·
+ 1£©ÐÞ¸ÄÏîÄ¿/pytest.iniÎÄ¼þÖÐµÄbase_urlµØÖ·¼´¿É
 
-windowsï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½
-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½main.py
-2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò¿ª£ï¿½ï¿½ï¿½Ä¿/reports/index.htmlï¿½ï¿½ï¿½É²é¿´ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½
+windowsÏÂÔËÐÐ£º
+1¡¢ÔËÐÐmain.py
+2¡¢ä¯ÀÀÆ÷´ò¿ª£ºÏîÄ¿/reports/index.html¼´¿É²é¿´²âÊÔ±¨¸æ
