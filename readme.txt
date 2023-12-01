@@ -13,3 +13,6 @@ pip install -r requirements.txt
 windows下运行：
 1、运行main.py
 2、浏览器打开：项目/reports/index.html即可查看测试报告
+
+
+*****
