@@ -7,15 +7,15 @@
       "name" : "AssertionError: assert 400 == 200\n +  where 400 = <Response [400]>.status_code",
       "children" : [ {
         "name" : "同步waf策略",
-        "uid" : "7d445af1b93756cf",
+        "uid" : "f4c20d4fbb73c333",
         "parentUid" : "70f5e75591870ccc2610fe43b73222e0",
         "status" : "failed",
         "time" : {
-          "start" : 1701313032200,
-          "stop" : 1701313032265,
-          "duration" : 65
+          "start" : 1701415481949,
+          "stop" : 1701415481991,
+          "duration" : 42
         },
-        "flaky" : false,
+        "flaky" : true,
         "parameters" : [ ]
       } ],
       "uid" : "70f5e75591870ccc2610fe43b73222e0"
@@ -23,15 +23,15 @@
       "name" : "AssertionError: assert 401 == 200\n +  where 401 = <Response [401]>.status_code",
       "children" : [ {
         "name" : "修改第一条waf策略数据详情里面第一条策略规则数据并复原",
-        "uid" : "67bf769574745c08",
+        "uid" : "19fa9d052d7f13fb",
         "parentUid" : "da4456b57aef3095c52adf94570fd943",
         "status" : "failed",
         "time" : {
-          "start" : 1701313033065,
-          "stop" : 1701313033140,
-          "duration" : 75
+          "start" : 1701415486806,
+          "stop" : 1701415486863,
+          "duration" : 57
         },
-        "flaky" : false,
+        "flaky" : true,
         "parameters" : [ ]
       } ],
       "uid" : "da4456b57aef3095c52adf94570fd943"

@@ -1,140 +1,140 @@
 [ {
-  "uid" : "f57261f28c378c20",
-  "name" : "修改策略排序值",
-  "time" : {
-    "start" : 1701313029214,
-    "stop" : 1701313029770,
-    "duration" : 556
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "76b9b6a2ee99fa59",
-  "name" : "编辑后还原网关信息",
-  "time" : {
-    "start" : 1701313030993,
-    "stop" : 1701313031611,
-    "duration" : 618
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7581be43ef5b4b5f",
-  "name" : "查询waf策略",
-  "time" : {
-    "start" : 1701313029168,
-    "stop" : 1701313029209,
-    "duration" : 41
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9a84425d8fac1f84",
-  "name" : "查询waf策略",
-  "time" : {
-    "start" : 1701313031616,
-    "stop" : 1701313031633,
-    "duration" : 17
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3771ab08956753ec",
-  "name" : "修改第一条waf数据详情里面的第一条策略规则数据状态并复原",
-  "time" : {
-    "start" : 1701313032400,
-    "stop" : 1701313033054,
-    "duration" : 654
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "99b604952bbaf5bc",
+  "uid" : "57d9ff1b61fb6c88",
   "name" : "修改业务网关排序值",
   "time" : {
-    "start" : 1701313030908,
-    "stop" : 1701313030946,
-    "duration" : 38
+    "start" : 1701415476471,
+    "stop" : 1701415476500,
+    "duration" : 29
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "67bf769574745c08",
+  "uid" : "19fa9d052d7f13fb",
   "name" : "修改第一条waf策略数据详情里面第一条策略规则数据并复原",
   "time" : {
-    "start" : 1701313033065,
-    "stop" : 1701313033140,
-    "duration" : 75
+    "start" : 1701415486806,
+    "stop" : 1701415486863,
+    "duration" : 57
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "98219fb378bd17fa",
-  "name" : "修改waf策略状态",
-  "time" : {
-    "start" : 1701313031640,
-    "stop" : 1701313032192,
-    "duration" : 552
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7d445af1b93756cf",
-  "name" : "同步waf策略",
-  "time" : {
-    "start" : 1701313032200,
-    "stop" : 1701313032265,
-    "duration" : 65
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "8e14643bb8afb94c",
-  "name" : "编辑后还原策略数据",
-  "time" : {
-    "start" : 1701313029832,
-    "stop" : 1701313030876,
-    "duration" : 1044
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b04cd1bb267ad4df",
-  "name" : "还原策略排序值",
-  "time" : {
-    "start" : 1701313029775,
-    "stop" : 1701313029827,
-    "duration" : 52
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6033e13087cb11e9",
-  "name" : "查询第一条waf数据详情",
-  "time" : {
-    "start" : 1701313032355,
-    "stop" : 1701313032396,
-    "duration" : 41
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "382f12b314ae46d3",
-  "name" : "查询网关信息",
-  "time" : {
-    "start" : 1701313030880,
-    "stop" : 1701313030902,
-    "duration" : 22
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "525ee354f98088a1",
+  "uid" : "7e6a6bb33627a34b",
   "name" : "恢复业务网关排序值",
   "time" : {
-    "start" : 1701313030952,
-    "stop" : 1701313030989,
-    "duration" : 37
+    "start" : 1701415476504,
+    "stop" : 1701415476532,
+    "duration" : 28
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "463ec6b7a6ae2225",
+  "name" : "查询waf策略",
+  "time" : {
+    "start" : 1701415477169,
+    "stop" : 1701415477184,
+    "duration" : 15
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dd7df50c10877fad",
+  "name" : "编辑后还原网关信息",
+  "time" : {
+    "start" : 1701415476535,
+    "stop" : 1701415477162,
+    "duration" : 627
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "12640fdd5f56d81",
+  "name" : "还原策略排序值",
+  "time" : {
+    "start" : 1701415475446,
+    "stop" : 1701415475494,
+    "duration" : 48
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "624f453279951da0",
+  "name" : "修改策略排序值",
+  "time" : {
+    "start" : 1701415474892,
+    "stop" : 1701415475445,
+    "duration" : 553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d713fca26fee689",
+  "name" : "查询waf策略",
+  "time" : {
+    "start" : 1701415474845,
+    "stop" : 1701415474892,
+    "duration" : 47
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "65bdf277c9a8a860",
+  "name" : "修改第一条waf数据详情里面的第一条策略规则数据状态并复原",
+  "time" : {
+    "start" : 1701415482049,
+    "stop" : 1701415482623,
+    "duration" : 574
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b6fadb71d35f921",
+  "name" : "修改waf策略状态",
+  "time" : {
+    "start" : 1701415477195,
+    "stop" : 1701415477743,
+    "duration" : 548
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ddc45506d527d4d",
+  "name" : "编辑后还原策略数据",
+  "time" : {
+    "start" : 1701415475508,
+    "stop" : 1701415476438,
+    "duration" : 930
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9829507fbf4d657",
+  "name" : "查询网关信息",
+  "time" : {
+    "start" : 1701415476446,
+    "stop" : 1701415476465,
+    "duration" : 19
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f4c20d4fbb73c333",
+  "name" : "同步waf策略",
+  "time" : {
+    "start" : 1701415481949,
+    "stop" : 1701415481991,
+    "duration" : 42
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c116896eb1f93da",
+  "name" : "查询第一条waf数据详情",
+  "time" : {
+    "start" : 1701415482009,
+    "stop" : 1701415482042,
+    "duration" : 33
   },
   "status" : "passed",
   "severity" : "normal"

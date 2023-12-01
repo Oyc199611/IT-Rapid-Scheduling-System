@@ -1,0 +1,165 @@
+{
+  "uid" : "37eed21fd175d43f",
+  "name" : "修改第一条waf策略数据详情里面第一条策略规则数据并复原",
+  "fullName" : "testcase.test_waf.Test_waf_services#test06_edit_waf_detail",
+  "historyId" : "94d632edd93bfec020992def87221571",
+  "time" : {
+    "start" : 1701415484734,
+    "stop" : 1701415484785,
+    "duration" : 51
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 401 == 200\n +  where 401 = <Response [401]>.status_code",
+  "statusTrace" : "self = <test_waf.Test_waf_services object at 0x0000023EB3496110>\nread_cookie = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXR...WVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}\nbase_url = 'http://134.224.183.100'\n\n    @allure.title(\"修改第一条waf策略数据详情里面第一条策略规则数据并复原\")\n    @allure.step('修改第一条waf策略数据详情里面第一条策略规则数据并复原')\n    @pytest.mark.run(order=6)\n    def test06_edit_waf_detail(self, read_cookie, base_url):\n        data = Waf_service().query_waf_strategy(read_cookie, base_url)\n        datas = json.loads(data.text)\n        if data.status_code == 200:\n            # 先查是否有WAF防护数据\n            if len(datas) != 0:\n                checkId = str(datas['data'][0]['id'])\n                enabled = '-1'\n                # 再查第一条waf数据是否有策略规则数据\n                data = Waf_service().waf_details(read_cookie, base_url, checkId, enabled)\n                datas = json.loads(data.text)\n                if data.status_code == 200:\n                    id = datas['data'][0]['id']\n                    if len(datas) != 0:\n                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name,'------用例场景：查询第一条waf数据详情里面的第一条策略规则的详细数据------'))\n                        # 查询第一条规则数据的详细数据\n                        data = Waf_service().query_waf_detail_detail(read_cookie, base_url, id)\n                        datass = json.loads(data.text)\n                        if data.status_code == 200:\n                            if len(datass['id']) != 0:\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '查询第一条waf数据详情里面的第一条策略规则的详细数据成功'))\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '获得的查询结果：%s' % datass))\n                                body = {\n                                    \"id\": str(datass['id']),\n                                    \"checkId\": str(datass['checkId']),\n                                    \"rule\": str(datass['rule']),\n                                    \"remark\": str(datass['remark'] + \"test\"),\n                                    \"enabled\": str(datass['enabled'])\n                                }\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '开始编辑-备注字段，并提交'))\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '提交参数为：%s' % body))\n                                data_edit = Waf_service().edit_waf_detail(read_cookie, body, base_url)\n                                if data_edit.status_code == 200:\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '修改第一条waf数据详情里面的第一条策略规则的详细数据-备注成功'))\n                                    # 睡眠1秒，防止接口写入数据比较慢，导致用例无效执行\n                                    time.sleep(0.5)\n                                    body[\"remark\"] = str(datass['remark'])\n                                    data_reset = Waf_service().edit_waf_detail(read_cookie, body, base_url)\n                                    if data_reset.status_code == 200:\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '还原第一条waf数据详情里面的第一条策略规则的详细数据-备注成功'))\n                                        assert data.status_code == 200 and data_edit.status_code == 200 and data_reset.status_code == 200\n                                    else:\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '还原第一条waf数据详情里面的第一条策略规则的详细数据-备注失败'))\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data_reset.text)))\n                                        assert data_reset.status_code == 200\n                                else:\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '修改第一条waf数据详情里面的第一条策略规则的详细数据-备注失败'))\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data_edit.text)))\n>                                   assert data_edit.status_code == 200\nE                                   assert 401 == 200\nE                                    +  where 401 = <Response [401]>.status_code\n\ntestcase\\test_waf.py:246: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "read_cookie",
+    "time" : {
+      "start" : 1701415484733,
+      "stop" : 1701415484734,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1701415474782,
+      "stop" : 1701415474829,
+      "duration" : 47
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 401 == 200\n +  where 401 = <Response [401]>.status_code",
+    "statusTrace" : "self = <test_waf.Test_waf_services object at 0x0000023EB3496110>\nread_cookie = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXR...WVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}\nbase_url = 'http://134.224.183.100'\n\n    @allure.title(\"修改第一条waf策略数据详情里面第一条策略规则数据并复原\")\n    @allure.step('修改第一条waf策略数据详情里面第一条策略规则数据并复原')\n    @pytest.mark.run(order=6)\n    def test06_edit_waf_detail(self, read_cookie, base_url):\n        data = Waf_service().query_waf_strategy(read_cookie, base_url)\n        datas = json.loads(data.text)\n        if data.status_code == 200:\n            # 先查是否有WAF防护数据\n            if len(datas) != 0:\n                checkId = str(datas['data'][0]['id'])\n                enabled = '-1'\n                # 再查第一条waf数据是否有策略规则数据\n                data = Waf_service().waf_details(read_cookie, base_url, checkId, enabled)\n                datas = json.loads(data.text)\n                if data.status_code == 200:\n                    id = datas['data'][0]['id']\n                    if len(datas) != 0:\n                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name,'------用例场景：查询第一条waf数据详情里面的第一条策略规则的详细数据------'))\n                        # 查询第一条规则数据的详细数据\n                        data = Waf_service().query_waf_detail_detail(read_cookie, base_url, id)\n                        datass = json.loads(data.text)\n                        if data.status_code == 200:\n                            if len(datass['id']) != 0:\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '查询第一条waf数据详情里面的第一条策略规则的详细数据成功'))\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '获得的查询结果：%s' % datass))\n                                body = {\n                                    \"id\": str(datass['id']),\n                                    \"checkId\": str(datass['checkId']),\n                                    \"rule\": str(datass['rule']),\n                                    \"remark\": str(datass['remark'] + \"test\"),\n                                    \"enabled\": str(datass['enabled'])\n                                }\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '开始编辑-备注字段，并提交'))\n                                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '提交参数为：%s' % body))\n                                data_edit = Waf_service().edit_waf_detail(read_cookie, body, base_url)\n                                if data_edit.status_code == 200:\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '修改第一条waf数据详情里面的第一条策略规则的详细数据-备注成功'))\n                                    # 睡眠1秒，防止接口写入数据比较慢，导致用例无效执行\n                                    time.sleep(0.5)\n                                    body[\"remark\"] = str(datass['remark'])\n                                    data_reset = Waf_service().edit_waf_detail(read_cookie, body, base_url)\n                                    if data_reset.status_code == 200:\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '还原第一条waf数据详情里面的第一条策略规则的详细数据-备注成功'))\n                                        assert data.status_code == 200 and data_edit.status_code == 200 and data_reset.status_code == 200\n                                    else:\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '还原第一条waf数据详情里面的第一条策略规则的详细数据-备注失败'))\n                                        self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data_reset.text)))\n                                        assert data_reset.status_code == 200\n                                else:\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '修改第一条waf数据详情里面的第一条策略规则的详细数据-备注失败'))\n                                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data_edit.text)))\n>                                   assert data_edit.status_code == 200\nE                                   assert 401 == 200\nE                                    +  where 401 = <Response [401]>.status_code\n\ntestcase\\test_waf.py:246: AssertionError",
+    "steps" : [ {
+      "name" : "修改第一条waf策略数据详情里面第一条策略规则数据并复原",
+      "time" : {
+        "start" : 1701415484735,
+        "stop" : 1701415484785,
+        "duration" : 50
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert 401 == 200\n +  where 401 = <Response [401]>.status_code\n",
+      "statusTrace" : "  File \"D:\\python\\location\\lib\\site-packages\\allure_commons\\_allure.py\", line 192, in impl\n    return func(*a, **kw)\n  File \"D:\\pycharm\\PycharmProject\\IT-Rapid-Scheduling-System\\testcase\\test_waf.py\", line 246, in test06_edit_waf_detail\n    assert data_edit.status_code == 200\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "read_cookie",
+        "value" : "{'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXRoIjoiY3NjcC5sb2dnaW5nLGNzY3AubG9nZ2luZy5sb2dpbixjc2NwLmxvZ2dpbmcub3BlcmF0aW9uLGNzY3Aucm9sZSxjc2NwLnJvbGUuYWRkLGNzY3Aucm9sZS5kZWwsY3NjcC5yb2xlLmVkaXQsY3NjcC51c2VyLmFkZCxjc2NwLnVzZXIuZGVsLGNzY3AudXNlci5lZGl0LGNzY3AudXNlci5xdWVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}"
+      }, {
+        "name" : "base_url",
+        "value" : "'http://134.224.183.100'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "6338baf834c8b7c2",
+      "name" : "log",
+      "source" : "6338baf834c8b7c2.txt",
+      "type" : "text/plain",
+      "size" : 3929
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "waf防护模块"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=6)"
+  }, {
+    "name" : "tag",
+    "value" : "test_waf"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_waf"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_waf_services"
+  }, {
+    "name" : "host",
+    "value" : "oyc"
+  }, {
+    "name" : "thread",
+    "value" : "38176-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_waf"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "test_waf", "run(order=6)" ]
+  },
+  "source" : "37eed21fd175d43f.json",
+  "parameterValues" : [ ]
+}

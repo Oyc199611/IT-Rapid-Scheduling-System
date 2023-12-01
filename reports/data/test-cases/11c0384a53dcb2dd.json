@@ -1,0 +1,165 @@
+{
+  "uid" : "11c0384a53dcb2dd",
+  "name" : "同步waf策略",
+  "fullName" : "testcase.test_waf.Test_waf_services#test03_synchronization_waf",
+  "historyId" : "77370585a753d178df8e0e55db14738c",
+  "time" : {
+    "start" : 1701415477750,
+    "stop" : 1701415477794,
+    "duration" : 44
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 400 == 200\n +  where 400 = <Response [400]>.status_code",
+  "statusTrace" : "self = <test_waf.Test_waf_services object at 0x0000023EB3495C00>\nread_cookie = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXR...WVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}\nbase_url = 'http://134.224.183.100'\n\n    @allure.title(\"同步waf策略\")\n    @allure.step('同步waf策略')\n    @pytest.mark.run(order=3)\n    def test03_synchronization_waf(self, read_cookie, base_url):\n        data = Waf_service().query_waf_strategy(read_cookie, base_url)\n        datas = json.loads(data.text)\n        if data.status_code == 200:\n            # 有策略数据再去同步数据（不改变数据的情况下）\n            if len(datas) != 0:\n                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '------用例场景：同步waf策略------'))\n                data = Waf_service().synchronization_waf(read_cookie, base_url)\n                if data.status_code == 200:\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '同步waf策略成功'))\n                    assert data.status_code == 200\n                else:\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '同步waf策略失败'))\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data.text)))\n>                   assert data.status_code == 200\nE                   assert 400 == 200\nE                    +  where 400 = <Response [400]>.status_code\n\ntestcase\\test_waf.py:101: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "read_cookie",
+    "time" : {
+      "start" : 1701415477749,
+      "stop" : 1701415477750,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1701415474782,
+      "stop" : 1701415474829,
+      "duration" : 47
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert 400 == 200\n +  where 400 = <Response [400]>.status_code",
+    "statusTrace" : "self = <test_waf.Test_waf_services object at 0x0000023EB3495C00>\nread_cookie = {'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXR...WVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}\nbase_url = 'http://134.224.183.100'\n\n    @allure.title(\"同步waf策略\")\n    @allure.step('同步waf策略')\n    @pytest.mark.run(order=3)\n    def test03_synchronization_waf(self, read_cookie, base_url):\n        data = Waf_service().query_waf_strategy(read_cookie, base_url)\n        datas = json.loads(data.text)\n        if data.status_code == 200:\n            # 有策略数据再去同步数据（不改变数据的情况下）\n            if len(datas) != 0:\n                self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '------用例场景：同步waf策略------'))\n                data = Waf_service().synchronization_waf(read_cookie, base_url)\n                if data.status_code == 200:\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '同步waf策略成功'))\n                    assert data.status_code == 200\n                else:\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '同步waf策略失败'))\n                    self.log.info('%s:%s' % (sys._getframe().f_code.co_name, '失败原因：%s' % json.loads(data.text)))\n>                   assert data.status_code == 200\nE                   assert 400 == 200\nE                    +  where 400 = <Response [400]>.status_code\n\ntestcase\\test_waf.py:101: AssertionError",
+    "steps" : [ {
+      "name" : "同步waf策略",
+      "time" : {
+        "start" : 1701415477750,
+        "stop" : 1701415477793,
+        "duration" : 43
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: assert 400 == 200\n +  where 400 = <Response [400]>.status_code\n",
+      "statusTrace" : "  File \"D:\\python\\location\\lib\\site-packages\\allure_commons\\_allure.py\", line 192, in impl\n    return func(*a, **kw)\n  File \"D:\\pycharm\\PycharmProject\\IT-Rapid-Scheduling-System\\testcase\\test_waf.py\", line 101, in test03_synchronization_waf\n    assert data.status_code == 200\n",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "read_cookie",
+        "value" : "{'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXRoIjoiY3NjcC5sb2dnaW5nLGNzY3AubG9nZ2luZy5sb2dpbixjc2NwLmxvZ2dpbmcub3BlcmF0aW9uLGNzY3Aucm9sZSxjc2NwLnJvbGUuYWRkLGNzY3Aucm9sZS5kZWwsY3NjcC5yb2xlLmVkaXQsY3NjcC51c2VyLmFkZCxjc2NwLnVzZXIuZGVsLGNzY3AudXNlci5lZGl0LGNzY3AudXNlci5xdWVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}"
+      }, {
+        "name" : "base_url",
+        "value" : "'http://134.224.183.100'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "cdc6ab6db492d4f0",
+      "name" : "log",
+      "source" : "cdc6ab6db492d4f0.txt",
+      "type" : "text/plain",
+      "size" : 739
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "waf防护模块"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=3)"
+  }, {
+    "name" : "tag",
+    "value" : "test_waf"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_waf"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_waf_services"
+  }, {
+    "name" : "host",
+    "value" : "oyc"
+  }, {
+    "name" : "thread",
+    "value" : "38176-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_waf"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "run(order=3)", "test_waf" ]
+  },
+  "source" : "11c0384a53dcb2dd.json",
+  "parameterValues" : [ ]
+}

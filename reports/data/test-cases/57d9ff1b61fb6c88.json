@@ -1,0 +1,161 @@
+{
+  "uid" : "57d9ff1b61fb6c88",
+  "name" : "修改业务网关排序值",
+  "fullName" : "testcase.test_kong.Test_kong_services#test02_change_kong_order",
+  "historyId" : "83c3e76fa4ff4e3c5e4426ca6f79fe95",
+  "time" : {
+    "start" : 1701415476471,
+    "stop" : 1701415476500,
+    "duration" : 29
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "read_cookie",
+    "time" : {
+      "start" : 1701415476470,
+      "stop" : 1701415476471,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_verify_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1701415474829,
+      "stop" : 1701415474829,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1701415474782,
+      "stop" : 1701415474829,
+      "duration" : 47
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "修改业务网关排序值",
+      "time" : {
+        "start" : 1701415476471,
+        "stop" : 1701415476500,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "read_cookie",
+        "value" : "{'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGEuY29tIiwibmFtZSI6ImFkbWluIiwicmVtIjowLCJpZCI6IjEiLCJhdXRoIjoiY3NjcC5sb2dnaW5nLGNzY3AubG9nZ2luZy5sb2dpbixjc2NwLmxvZ2dpbmcub3BlcmF0aW9uLGNzY3Aucm9sZSxjc2NwLnJvbGUuYWRkLGNzY3Aucm9sZS5kZWwsY3NjcC5yb2xlLmVkaXQsY3NjcC51c2VyLmFkZCxjc2NwLnVzZXIuZGVsLGNzY3AudXNlci5lZGl0LGNzY3AudXNlci5xdWVyeSIsImV4cCI6MTcwMTUwMDYyMX0.mlbLghwukvqPW0GkEZsQb06BXgYBQKLos1wXtW80z81EEnut6811xVhsHn9EVzlg4WIpkcQmHkiZbutnO9uyCA'}"
+      }, {
+        "name" : "base_url",
+        "value" : "'http://134.224.183.100'"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "6a55801981e1babf",
+      "name" : "log",
+      "source" : "6a55801981e1babf.txt",
+      "type" : "text/plain",
+      "size" : 609
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "业务网关模块"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=2)"
+  }, {
+    "name" : "tag",
+    "value" : "test_kong"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcase"
+  }, {
+    "name" : "suite",
+    "value" : "test_kong"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_kong_services"
+  }, {
+    "name" : "host",
+    "value" : "oyc"
+  }, {
+    "name" : "thread",
+    "value" : "38176-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcase.test_kong"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "run(order=2)", "test_kong" ]
+  },
+  "source" : "57d9ff1b61fb6c88.json",
+  "parameterValues" : [ ]
+}
